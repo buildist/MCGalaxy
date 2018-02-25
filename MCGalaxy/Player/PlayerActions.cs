@@ -130,6 +130,7 @@ namespace MCGalaxy {
         internal static void CheckGamesJoin(Player p, Level oldLvl) {
             Server.lava.PlayerJoinedLevel(p, p.level, oldLvl);
             Server.zombie.PlayerJoinedLevel(p, p.level, oldLvl);
+            Server.ctfGame.PlayerJoinedLevel(p, p.level, oldLvl);
             
             if (p.inTNTwarsMap) p.canBuild = true;
             TntWarsGame game = TntWarsGame.Find(p.level);

@@ -270,12 +270,14 @@ namespace MCGalaxy
         public const byte Air_FloodLayer = 202;
         public const byte Air_FloodDown = 203;
         public const byte Air_FloodUp = 204;
-        //public const byte Door_Obsidian_air = 205;   // unused in core
-        //public const byte Door_Glass_air = 206;      // unused in core
-        //public const byte Door_Stone_air = 207;      // unused in core
-        //public const byte Door_Leaves_air = 208;     // unused in core
-        //public const byte Door_Sand_air = 209;       // unused in core
-        //public const byte Door_Wood_air = 210;       // unused in core
+
+        public const byte CTF_Mine = 205;
+        public const byte CTF_Mine_Red = 206;
+        public const byte CTF_Mine_Blue = 207;
+        public const byte CTF_Flag_Red = 208;
+        public const byte CTF_Flag_Blue = 209;
+        public const byte CTF_Crate = 210;
+
         public const byte Door_Green_air = 211;
         public const byte Door_TNT_air = 212;
         //public const byte Door_Slab_air = 213;       // unused in core

@@ -136,6 +136,7 @@ namespace MCGalaxy {
                                         cuboided, TimesBeenKicked, (long)TotalTime.TotalSeconds, TotalMessagesSent, name);
             
             Server.zombie.SaveZombieStats(this);
+            Server.ctfGame.SaveCTFStats(this);
         }
 
         #region == GLOBAL MESSAGES ==
@@ -288,6 +289,7 @@ namespace MCGalaxy {
                     tntwarsgame.Players.Remove(tntwarsgame.FindPlayer(this));
                     tntwarsgame.SendAllPlayersMessage("TNT Wars: " + ColoredName + " %Shas left TNT Wars!");
                 }
+                Server.ctfGame.PlayerDisconnected(this);
 
                 Entities.DespawnEntities(this, false);
                 ShowDisconnectInChat(chatMsg, isKick);

@@ -71,10 +71,11 @@ namespace MCGalaxy {
             }
         }
         
-        internal static ConfigElement[] serverConfig, levelConfig, zombieConfig, zoneConfig;
+        internal static ConfigElement[] serverConfig, levelConfig, zombieConfig, ctfConfig, zoneConfig;
         public static void Start() {
             serverConfig = ConfigElement.GetAll(typeof(ServerConfig));
             zombieConfig = ConfigElement.GetAll(typeof(ZSConfig));
+            ctfConfig = ConfigElement.GetAll(typeof(ClassicCTFConfig));
             levelConfig = ConfigElement.GetAll(typeof(LevelConfig));
             zoneConfig = ConfigElement.GetAll(typeof(ZoneConfig));
             
@@ -101,6 +102,7 @@ namespace MCGalaxy {
 
             lava = new LavaSurvival();
             zombie = new ZSGame();
+            ctfGame = new ClassicCTFGame();
             Countdown = new CountdownGame();
             LoadAllSettings();
             SrvProperties.GenerateSalt();
@@ -108,6 +110,7 @@ namespace MCGalaxy {
             InitDatabase();
             Economy.LoadDatabase();
             Server.zombie.CheckTableExists();
+            Server.ctfGame.CheckTableExists();
 
             Background.QueueOnce(UpgradeTasks.CombineEnvFiles);
             Background.QueueOnce(LoadMainLevel);

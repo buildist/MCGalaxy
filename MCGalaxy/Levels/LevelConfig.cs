@@ -243,8 +243,48 @@ namespace MCGalaxy {
         public int RoundsPlayed = 0;
         [ConfigInt("RoundsHumanWon", "Game", 0)]
         public int RoundsHumanWon = 0;
-        
-        
+
+        // CTF settings.
+
+        [ConfigInt("CTFDivider", "CTF", 0)]
+        public int CTFDivider = 0;
+        [ConfigInt("CTFBuildCeiling", "CTF", 0)]
+        public int CTFBuildCeiling = 0;
+        [ConfigInt("CTFBuildFloor", "CTF",-8)]
+        public int CTFBuildFloor = -8;
+
+        [ConfigInt("CTFRedSpawnX", "CTF", 0)]
+        public int CTFRedSpawnX = 0;
+        [ConfigInt("CTFRedSpawnY", "CTF", 0)]
+        public int CTFRedSpawnY = 0;
+        [ConfigInt("CTFRedSpawnZ", "CTF", 0)]
+        public int CTFRedSpawnZ = 0;
+        [ConfigInt("CTFBlueSpawnX", "CTF", 0)]
+        public int CTFBlueSpawnX = 0;
+        [ConfigInt("CTFBlueSpawnY", "CTF", 0)]
+        public int CTFBlueSpawnY = 0;
+        [ConfigInt("CTFBlueSpawnZ", "CTF", 0)]
+        public int CTFBlueSpawnZ = 0;
+
+        [ConfigInt("CTFRedFlagX", "CTF", 0)]
+        public int CTFRedFlagX = 0;
+        [ConfigInt("CTFRedFlagY", "CTF", 0)]
+        public int CTFRedFlagY = 0;
+        [ConfigInt("CTFRedFlagZ", "CTF", 0)]
+        public int CTFRedFlagZ = 0;
+        [ConfigInt("CTFBlueFlagX", "CTF", 0)]
+        public int CTFBlueFlagX = 0;
+        [ConfigInt("CTFBlueFlagY", "CTF", 0)]
+        public int CTFBlueFlagY = 0;
+        [ConfigInt("CTFBlueFlagZ", "CTF", 0)]
+        public int CTFBlueFlagZ = 0;
+
+        [ConfigString("CTFSolidBlocks", "CTF", "")]
+        public string CTFSolidBlocks = "";
+
+        [ConfigString("CTFMapAuthor", "CTF", "Unknown")]
+        public string CTFMapAuthor = "Unknown";
+
         public string Color {
             get {
                 LevelPermission maxPerm = VisitMin;

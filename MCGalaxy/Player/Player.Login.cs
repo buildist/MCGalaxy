@@ -86,6 +86,7 @@ namespace MCGalaxy {
             ZombieStats stats = Server.zombie.LoadZombieStats(name);
             Game.MaxInfected = stats.MaxInfected; Game.TotalInfected = stats.TotalInfected;
             Game.MaxRoundsSurvived = stats.MaxRounds; Game.TotalRoundsSurvived = stats.TotalRounds;
+            ctfStats = Server.ctfGame.LoadCTFStats(name);
             
             if (!Directory.Exists("players"))
                 Directory.CreateDirectory("players");

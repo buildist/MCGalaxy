@@ -90,6 +90,7 @@ namespace MCGalaxy {
 
         // Games
         public static ZSGame zombie;
+        public static ClassicCTFGame ctfGame;
         
         public static int YesVotes = 0, NoVotes = 0;
         public static bool voting = false, votingforlevel = false;

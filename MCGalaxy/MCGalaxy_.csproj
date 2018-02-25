@@ -486,6 +486,10 @@
     <Compile Include="Events\ModActionEvent.cs" />
     <Compile Include="Events\PlayerClick.cs" />
     <Compile Include="Events\PlayerEvents.cs" />
+    <Compile Include="Games\ClassicCTF\ClassicCTFConfig.cs" />
+    <Compile Include="Games\ClassicCTF\ClassicCTFGame.cs" />
+    <Compile Include="Games\ClassicCTF\Mine.cs" />
+    <Compile Include="Games\ClassicCTF\Player.CTF.cs" />
     <Compile Include="Games\Countdown\CountdownGame.cs" />
     <Compile Include="Games\Countdown\CountdownMapGen.cs" />
     <Compile Include="Games\Countdown\CountdownPlugin.cs" />
@@ -540,6 +544,7 @@
     <Compile Include="Levels\IO\Importers\McLevelImporter.cs" />
     <Compile Include="Levels\IO\MapFormats.cs" />
     <Compile Include="Levels\Level.Blocks.cs" />
+    <Compile Include="Games\ClassicCTF\Level.CTF.cs" />
     <Compile Include="Levels\Level.Fields.cs" />
     <Compile Include="Levels\AccessController.cs" />
     <Compile Include="Levels\LevelConfig.cs" />
@@ -701,6 +706,7 @@
     <None Include="..\README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="Games\ClassicCTF\ClassicCTFGame.SetBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Changelog.txt">
@@ -716,18 +722,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\Maintenance" />
-    <Folder Include="Database\Stats" />
-    <Folder Include="Network\Heartbeat" />
-    <Folder Include="Network\IRCPlugin" />
-    <Folder Include="Network\Socket" />
-    <Folder Include="Network\Utils" />
-    <Folder Include="Network\Packets" />
-    <Folder Include="Entity" />
-    <Folder Include="util\Formatting" />
-    <Folder Include="util\Threading" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

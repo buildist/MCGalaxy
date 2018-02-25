@@ -301,7 +301,11 @@ namespace MCGalaxy {
                         RevertBlock(x, y, z); return;
                     }
                 }
-                ManualChange(x, y, z, action != 0, held, true);
+
+                if (!Server.ctfGame.SetBlock(this, level, x, y, z, action != 0, held)) {
+                    ManualChange(x, y, z, action != 0, held, true);
+                }
+
             } catch ( Exception e ) {
                 // Don't ya just love it when the server tattles?
                 Chat.MessageOps(DisplayName + " has triggered a block change error");
@@ -640,6 +644,7 @@ namespace MCGalaxy {
 
             if (Server.lava.HandlesChatMessage(this, text)) return true;
             if (Server.zombie.HandlesChatMessage(this, text)) return true;
+            if (Server.ctfGame.HandlesChatMessage(this, text)) return true;
             return false;
         }
         
